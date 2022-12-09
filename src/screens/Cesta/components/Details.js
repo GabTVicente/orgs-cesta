@@ -1,8 +1,9 @@
 import React from 'react';
 import Texto from '../../../components/Texto';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import Button from '../../../components/Button';
 
-export default function Details({nome, logoFazenda, nomeFazenda, descricao, preco}) {
+export default function Details({nome, logoFazenda, nomeFazenda, descricao, preco, botao}) {
     return <>
         <Texto style={styles.nome}>{nome}</Texto>
         <View style={styles.fornecedor}>
@@ -11,6 +12,7 @@ export default function Details({nome, logoFazenda, nomeFazenda, descricao, prec
         </View>
         <Texto style={styles.descricao}>{descricao}</Texto>
         <Texto style={styles.price}>{preco}</Texto>
+        <Button>{botao}</Button>
     </>
 }
 
@@ -47,5 +49,5 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         paddingVertical: 12,
-    }
+    },
 })

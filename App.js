@@ -15,8 +15,8 @@ export default function App() {
     return <AppLoading />
   }
   return (
-    <SafeAreaView>
-      <StatusBar animated={true} hidden={true} />
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar animated={true} />
       <Cesta {...mock} />
     </SafeAreaView>
   );
