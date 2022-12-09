@@ -1,22 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar, SafeAreaView } from 'react-native';
 import Cesta from './src/screens/Cesta';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Teste de fast Refresh!</Text>
-      <StatusBar style="auto" />
+    <SafeAreaView>
+      <StatusBar animated={true} hidden={true}/>
       <Cesta />
-    </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
